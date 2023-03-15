@@ -12,25 +12,11 @@
     <script src="script.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="../easyrtc/easyrtc.js"></script>
-    <script type="text/javascript" src="js/demo_audio_video_simple.js"></script>
+    <script type="text/javascript" src="js/demo_instant_messaging.js"></script>
  
   </head>
   <body onload="connect();">
-		      <div id="demoContainer">
-            <div id="connectControls">
-              <div id="iam">Not yet connected...</div>
-              <br />
-              <strong>Connected users:</strong>
-              <div id="otherClients"></div>
-            </div>
-            <div id="videos">
-              <video autoplay="autoplay" playsinline="playsinline" class="easyrtcMirror" id="selfVideo" muted="muted" volume="0" ></video>
-              <div style="position:relative;float:left;">
-              <video autoplay="autoplay" playsinline="playsinline" id="callerVideo"></video>
-              </div>
-              <!-- each caller video needs to be in it"s own div so it"s close button can be positioned correctly -->
-            </div>
-          </div>
+    <a href="index1.html">Video & audio this way...</a>
           <div id="sendMessageArea">
             <div id="iam"></div>
             <textarea id="sendMessageText"></textarea>
