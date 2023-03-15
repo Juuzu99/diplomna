@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Three way comunication</title>
+    <link rel="stylesheet" type="text/css" href="../easyrtc/easyrtc.css" />
+    <link rel="stylesheet" href="style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+ 
+    <!-- Assumes global locations for socket.io.js and easyrtc.js -->
+    <script src="script.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="../easyrtc/easyrtc.js"></script>
+    <script type="text/javascript" src="js/demo_audio_video_simple.js"></script>
+ 
+  </head>
+  <body onload="connect();">
+		      <div id="demoContainer">
+            <div id="connectControls">
+              <div id="iam">Not yet connected...</div>
+              <br />
+              <strong>Connected users:</strong>
+              <div id="otherClients"></div>
+            </div>
+            <div id="videos">
+              <video autoplay="autoplay" playsinline="playsinline" class="easyrtcMirror" id="selfVideo" muted="muted" volume="0" ></video>
+              <div style="position:relative;float:left;">
+              <video autoplay="autoplay" playsinline="playsinline" id="callerVideo"></video>
+              </div>
+              <!-- each caller video needs to be in it"s own div so it"s close button can be positioned correctly -->
+            </div>
+          </div>
+          <div id="sendMessageArea">
+            <div id="iam"></div>
+            <textarea id="sendMessageText"></textarea>
+            <div id="otherClients"></div>
+			<div id="receiveMessageArea">
+            Received Messages:
+            <div id="conversation"></div>
+          </div>
+          </div>
+          
+  </body>
+</html>
