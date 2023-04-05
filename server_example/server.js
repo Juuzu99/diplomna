@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const session = require('express-session');
 const path = require('path');
 
@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'static')));
 // http://localhost:3000/
 app.get('/', function(request, response) {
 	// Render login template
-	response.sendFile(path.join(__dirname + './static/login.html'));
+	response.sendFile(path.join(__dirname + '/static/login.html'));
 });
 
 // http://localhost:3000/auth
@@ -60,7 +60,7 @@ app.post('/auth', function(request, response) {
 				request.session.loggedin = true;
 				request.session.username = username;
 				// Redirect to home page
-				response.redirect('/home');
+				response.redirect('/vc.html');
 			} else {
 				response.send('Incorrect Username and/or Password!');
 			}			
