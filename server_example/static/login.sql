@@ -8,4 +8,5 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
-INSERT INTO `accounts` (`id`, `username`, `password` ) VALUES (1, 'test','test' );
+INSERT INTO `accounts` (`id`, `username`, `password` ) VALUES (2, 'stamat','stamat' );
+select * from `accounts`;

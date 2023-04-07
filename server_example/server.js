@@ -17,7 +17,7 @@ var easyrtc = require("../"); // EasyRTC internal module
 const connection = mysql.createConnection({
 	host     : 'localhost',
 	user     : 'root',
-	password : '135246Aleks',
+	password : '135246aleks',
 	database : 'nodelogin'
 });
 
