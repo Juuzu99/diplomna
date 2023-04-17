@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Three way comunication</title>
-    <link rel="stylesheet" type="text/css" href="../easyrtc/easyrtc.css" />
-    <link rel="stylesheet" href="style.css">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
- 
-    <!-- Assumes global locations for socket.io.js and easyrtc.js -->
-    <script src="script.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="../easyrtc/easyrtc.js"></script>
-    <script type="text/javascript" src="js/demo_instant_messaging.js"></script>
- 
-  </head>
-  <body onload="connect();">
-    <a href="vc.html">Video & audio this way...</a>
-          <div id="sendMessageArea">
-            <div id="iam"></div>
-            <textarea id="sendMessageText"></textarea>
-            <div id="otherClients"></div>
-			<div id="receiveMessageArea">
-            Received Messages:
-            <div id="conversation"></div>
-            
-          </div>
-          </div>
-          
-  </body>
+<head>
+  <title>Three way comunication</title>
+  <link rel="stylesheet" type="text/css" href="../easyrtc/easyrtc.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Assumes global locations for socket.io.js and easyrtc.js -->
+  <script src="script.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="../easyrtc/easyrtc.js"></script>
+  <script type="text/javascript" src="js/demo_instant_messaging.js"></script>
+
+</head>
+
+<body onload="connect();">
+  <button onclick="redirectToPage()">Video and audio this way</button>
+  <script>
+    function redirectToPage() {
+      window.location.href = "http://localhost:8080/vc.html";
+    }
+  </script>
+  <div id="sendMessageArea">
+    <div id="iam"></div>
+    <textarea id="sendMessageText"></textarea>
+    <div id="otherClients"></div>
+    <div id="receiveMessageArea">
+      Received Messages:
+      <div id="conversation"></div>
+
+    </div>
+  </div>
+
+</body>
+
 </html>
